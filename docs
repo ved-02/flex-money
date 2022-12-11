@@ -1,0 +1,7 @@
+POST: /user/get
+                req: {email}
+                res: userdata
+POST: /user/register
+                req: {email, name, age, batch}
+POST: /user/payment
+                req: {email, batch}

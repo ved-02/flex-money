@@ -7,7 +7,7 @@ const PaymentController = async (req, res) => {
             res.json({ success: false, message: "user not found" });
             return;
         }
-        if (user.paymentDate[user.paymentDate.length - 1].getMonth() === new Date().getMonth()) {
+        if (user.paymentDate.length > 0 && user.paymentDate[user.paymentDate.length - 1].getMonth() === new Date().getMonth()) {
             res.json({ success: false, error: "Already paid" });
             return;
         }
